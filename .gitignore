@@ -1,0 +1,72 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+wheels/
+pip-wheel-metadata/
+
+# Test / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+pytestdebug.log
+
+# Type checking / linting
+.mypy_cache/
+.pyright/
+.pyrefly/
+.ruff_cache/
+
+# IDEs / editors
+.idea/
+.vscode/
+*.iml
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# Local AgentIdem output
+trace.json
+report.json
+*-trace.json
+*-report.json
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Local Python tooling
+.python-version
+
+# OS / filesystem metadata
+Thumbs.db
+
+# Build tool caches
+.cache/
+
+# Optional local examples output
+examples/*.json

@@ -1,0 +1,117 @@
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "agentidem"
+version = "1.0.0"
+description = "Reliability testing for state-changing AI agents."
+readme = "README.md"
+requires-python = ">=3.11"
+
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+
+authors = [
+    { name = "AgentIdem" }
+]
+
+keywords = [
+    "ai",
+    "agents",
+    "agent-testing",
+    "reliability",
+    "idempotency",
+    "fault-injection",
+    "side-effects",
+    "llm",
+    "testing"
+]
+
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Software Development :: Testing"
+]
+
+dependencies = [
+    "typer>=0.16,<1.0",
+    "rich>=14,<15",
+    "pydantic>=2.11,<3.0"
+]
+
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8,<10",
+    "pytest-asyncio>=1,<2",
+    "pytest-cov>=6,<8",
+    "ruff>=0.12,<1.0",
+    "mypy>=1.17,<2.0",
+    "build>=1.2,<2.0",
+    "twine>=6,<7"
+]
+
+
+[project.scripts]
+agentidem = "agentidem.cli:app"
+
+
+[project.urls]
+Homepage = "https://agentidem.com"
+Repository = "https://github.com/AgentIdem/python-sdk"
+Issues = "https://github.com/AgentIdem/python-sdk/issues"
+
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"
+
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+src = ["src", "tests"]
+
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "I",
+    "B",
+    "UP"
+]
+
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
+
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_unused_configs = true
+pretty = true
+show_error_codes = true
