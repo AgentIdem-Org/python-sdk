@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "agentidem"
-version = "1.0.0"
+version = "1.0.1"
 description = "Reliability testing for state-changing AI agents."
 readme = "README.md"
 requires-python = ">=3.11"
@@ -69,8 +69,8 @@ agentidem = "agentidem.cli:app"
 
 [project.urls]
 Homepage = "https://agentidem.com"
-Repository = "https://github.com/AgentIdem/python-sdk"
-Issues = "https://github.com/AgentIdem/python-sdk/issues"
+Repository = "https://github.com/AgentIdem-Org/python-sdk"
+Issues = "https://github.com/AgentIdem-Org/python-sdk/issues"
 
 
 [tool.setuptools]
